@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(98, 111, 105)">
+    <form class="form" action="#" onsubmit="return funOne()">
+        <div id="calculator">
+            <input type="text" id="fact" placeholder="Enter a number">
+            <input class="equal" type="submit"value="=">
+            <div id="par"></div>
+            <p class="factorial">factorial</p>
+            <div id="result"></div>
+            <p class="fibonacci">fibonacci</p>
+            <div id="resultTwo"></div>
+        </div>
+    </form>
+
+    <script>
+        function funOne() {
+            factorial=document.getElementById("fact").value
+            fc=1
+        if(factorial==""){
+            document.getElementById("par").innerText="Please enter a number"
+            return false
+        } 
+        
+        else if (isNaN(factorial)) {
+            document.getElementById("par").innerText="Must be a number";
+            return false;
+        }
+
+        else {
+            for (var i=1;i<=factorial;i++){ 
+        fc=fc*i;
+        }
+        document.getElementById("result").innerText=fc;
+        return false;
+    }
+}
+        
+
+    </script>
+</body>
+</html>
