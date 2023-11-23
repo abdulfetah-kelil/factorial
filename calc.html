@@ -10,7 +10,7 @@
     <form class="form" action="#" onsubmit="return funOne()">
         <div id="calculator">
             <input type="text" id="fact" placeholder="Enter a number">
-            <input class="equal" type="submit"value="=">
+            <input class="equal" type="submit"value="="> <br>
             <div id="par"></div>
             <p class="factorial">factorial</p>
             <div id="result"></div>
@@ -32,7 +32,7 @@
             document.getElementById("par").innerText="Must be a number";
             return false;
         }
-
+        
         else {
             for (var i=1;i<=factorial;i++){ 
         fc=fc*i;
